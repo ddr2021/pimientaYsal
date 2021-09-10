@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<!-- HEAD -->
+<%-include('./partials/head.ejs')%>;
+
+<body>
+  <!-- Navbar (sit on top) -->
+  <%-include('./partials/navbar.ejs')%>;
+
+
+  <!-- Header -->
+  <%-include('./partials/header.ejs')%>;
+
+  <!-- Page content -->
+  <div class="ps-content">
+
+    <!-- About Section -->
+    <%-include('./partials/about.ejs')%>;
+
+    <hr />
+    <!-- Menu Section -->
+    <div class="ps-row ps-padding-64" id="menu">
+      <div class="ps-col l6 ps-padding-large">
+
+        <!-- MENU TITLE -->
+        <%-include('./partials/menuTitle.ejs')%>;
+
+        <!-- MENU -->
+        <% menu.forEach(dish => { %>
+
+        <a href="/detalle/<%= dish.id+'#menu'  %> ">
+          <h4><%= dish.dish %></h4>
+        </a>
+
+        <p class="ps-text-grey">
+          <%= dish.description %> <span><%= dish.price %></span>
+        </p>
+        <br />
+
+        <% }) %>
+
+      </div>
+
+      <!-- MENU IMG -->
+      <%- include('./partials/menuImg.ejs') %>
+
+    </div>
+
+    <!-- Footer -->
+    <%-include('./partials/footer.ejs')%>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<!-- HEAD -->
+<%-include('./partials/head.ejs')%>
+
+<body>
+  <!-- Navbar (sit on top) -->
+  <%-include('./partials/navbar.ejs')%>
+
+  <!-- Header -->
+  <%-include('./partials/header.ejs')%>
+
+  <!-- Page content -->
+  <div class="ps-content">
+
+    <!-- About Section -->
+    <%-include('./partials/about.ejs')%>;
+
+
+    <!-- Menu Section -->
+    <div class="ps-row ps-padding-64" id="menu">
+      <div class="ps-col l6 ps-padding-large">
+
+        <!-- MENU TITLE -->
+        <%-include('./partials/menuTitle.ejs')%>;
+
+        <h1 class="ps-center"><%=IDdish.dish%></h1>
+        <br />
+
+        <p> <%=IDdish.description%></p>
+
+        <img src="/images/<%= IDdish.image  %> " alt="<%= IDdish.alt %> " class="ps-round ps-image ps-opacity-min">
+
+        <p class="ps-text-grey">
+          <%= IDdish.price  %>
+        </p>
+
+        <h4>
+          <%= IDdish.descrExtended %>
+          <% if (IDdish.descrExtended===""){ %>
+          <%= 'Plato típico'  %>
+          <% } %>
+        </h4>
+
+
+      </div>
+
+      <!-- MENU IMG -->
+      <%- include('./partials/menuImg.ejs') %>
+    </div>
+
+    <!-- Footer -->
+    <%-include('./partials/footer.ejs')%>
+
+  </div>
+</body>
+
+</html>

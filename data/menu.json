@@ -1,0 +1,27 @@
+[
+
+    {
+        "id": 1,
+        "dish": "Espárragos blancos",
+        "description": "Espárragos blancos con vinagreta de verduras y jamón ibérico",
+        "price": "U$S 37.50"
+    },
+    {
+        "id": 2,
+        "dish": "Mousse de arroz",
+        "description": "Mousse de arroz con leche y aroma de azahar",
+        "price": "U$S 27.50"
+    },
+    {
+        "id": 3,
+        "dish": "Risotto de berenjena",
+        "description": "Risotto de berenjena y queso de cabra",
+        "price": "U$S 47.00"
+    },
+    {
+        "id": 4,
+        "dish": "Carpaccio fresco",
+        "description": "Entrada Carpaccio de salmón con cítricos",
+        "price": "U$S 65.50"
+    }
+]
